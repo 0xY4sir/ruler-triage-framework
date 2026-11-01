@@ -16,12 +16,12 @@ Ruler Triage Framework turns an initial suspicious-installer review into a repea
 
 ```mermaid
 flowchart TD
-    A["Suspicious RMM installer"] --> B["1. Cryptographic hashing<br/>SHA-256, SHA-1, MD5"]
-    B --> C["2. Digital signature<br/>Authenticode evidence"]
-    C --> D["3. VirusTotal v3<br/>Optional hash-only lookup"]
-    D --> E["4. Vendor hash database<br/>Approved / Pending / Blocked"]
-    E --> F["5. Confidence scoring<br/>Explainable weighted indicators"]
-    F --> G["6. Structured report<br/>Console and optional JSON"]
+    A["Suspicious RMM installer"] --> B["1. Cryptographic hashing<br>SHA-256, SHA-1, MD5"]
+    B --> C["2. Digital signature<br>Authenticode evidence"]
+    C --> D["3. VirusTotal v3<br>Optional hash-only lookup"]
+    D --> E["4. Vendor hash database<br>Approved / Pending / Blocked"]
+    E --> F["5. Confidence scoring<br>Explainable weighted indicators"]
+    F --> G["6. Structured report<br>Console and optional JSON"]
 ```
 
 ## The Ground-Truth Case Study (ManageEngine UEMS)
