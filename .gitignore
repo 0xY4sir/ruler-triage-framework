@@ -1,0 +1,26 @@
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local secrets and generated files
+.env
+.env.*
+!.env.example
+*.log
+triage_*.json
+
+# Ignore generated or private JSON, but keep the project database and docs
+*.json
+!vendor_hashes.json
+!docs/*.json
+!docs/**/*.json
+
+# Streamlit local secrets; retain the checked-in theme configuration
+.streamlit/*
+!.streamlit/config.toml
+
+# Suspicious sample binaries must not be committed
+samples/*.exe

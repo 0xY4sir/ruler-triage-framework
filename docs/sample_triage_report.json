@@ -1,0 +1,75 @@
+{
+  "report_meta": {
+    "tool": "ruler_triage.py",
+    "version": "2.0.0",
+    "project": "A Structured Triage Framework for IDS Alerts on Suspicious RMM Installers",
+    "institution": "University of Ha'il — Department of Information Security",
+    "generated": "2026-11-01T14:34:18.652564+00:00"
+  },
+  "target_file": {
+    "path": "Ground-truth simulation (original binary not included)",
+    "filename": "InstallShield Setup.exe",
+    "size_bytes": null
+  },
+  "hashes": {
+    "sha256": "eddb6acad4b6078e7a691d4fb8c452916efd288f27eb99a8426a2b81dfa5539c",
+    "sha1": null,
+    "md5": null
+  },
+  "signature": {
+    "status": "Unsigned",
+    "signer_cn": "",
+    "expiry": "",
+    "detail": "Simulated from ground-truth: binary confirmed unsigned.",
+    "tier": 2
+  },
+  "virustotal": {
+    "found": true,
+    "detection_ratio": "1/69",
+    "malicious": 1,
+    "suspicious": 0,
+    "total_engines": 69,
+    "community_score": 0,
+    "permalink": "https://www.virustotal.com/gui/file/eddb6acad4b6078e7a691d4fb8c452916efd288f27eb99a8426a2b81dfa5539c",
+    "error": null
+  },
+  "whitelist_check": {
+    "match": true,
+    "status": "pending_verification",
+    "vendor": "ManageEngine",
+    "product": "UEMS Agent (Desktop Central) — InstallShield Setup",
+    "version": "Unknown — recovered from Suspicious File.zip",
+    "notes": "PRIMARY VALIDATION CASE. Set status=approved after IT Ops confirmation to demonstrate the -80 whitelist-override path."
+  },
+  "verdict": {
+    "score": 20,
+    "verdict": "Low Confidence (Suspicious / Pending Verification)",
+    "reasons": [
+      "+30  Unsigned binary — no Authenticode signature detected.",
+      "+20  VT detection ratio: 1/69 engines flagged.",
+      "-30  DB match (PENDING VERIFICATION): ManageEngine — UEMS Agent (Desktop Central) — InstallShield Setup. Hash is known but deployment NOT yet confirmed by IT Operations."
+    ],
+    "warnings": [
+      "This hash is in the vendor database as PENDING VERIFICATION. Confirm with IT Operations before closing the alert. Notes: PRIMARY VALIDATION CASE. Set status=approved after IT Ops confirmation to demonstrate the -80 whitelist-override path."
+    ]
+  },
+  "case_validation": {
+    "ground_truth_name": "ManageEngine UEMS Agent — Tahakom COOP Investigation",
+    "ground_truth_sha256": "eddb6acad4b6078e7a691d4fb8c452916efd288f27eb99a8426a2b81dfa5539c",
+    "ground_truth_verdict": "Low Confidence (Suspicious / Pending Verification)",
+    "ground_truth_score": 20,
+    "current_sha256": "eddb6acad4b6078e7a691d4fb8c452916efd288f27eb99a8426a2b81dfa5539c",
+    "current_verdict": "Low Confidence (Suspicious / Pending Verification)",
+    "current_score": 20,
+    "is_ground_truth_hash": true,
+    "verdict_category_match": true,
+    "framework_confidence": "VALIDATED — Tool verdict matches ground-truth investigation for the ManageEngine UEMS Tahakom case.",
+    "ground_truth_reference": {
+      "date": "2026-07-19",
+      "network": "SMB2 / port 445 / internal-to-internal (10.x.x.20 → 10.x.x.128)",
+      "vt_ratio": "1/69 (ESET: RemoteAdmin)",
+      "sandbox": "Clean — standard InstallShield unpacking, no malicious indicators"
+    }
+  },
+  "scoring_rationale_ref": "See SCORING_RATIONALE constant in ruler_triage.py"
+}

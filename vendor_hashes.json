@@ -1,0 +1,67 @@
+{
+  "_comment": "Ruler Triage Framework — Vendor Hash Whitelist / Blocklist Database",
+  "_format":  "sha256_lowercase → { vendor, product, version, status, notes }",
+  "_status_values": "approved | pending_verification | blocked",
+  "_project": "A Structured Triage Framework for IDS Alerts on Suspicious RMM Installers",
+  "_institution": "University of Ha'il — Department of Information Security",
+  "_last_updated": "2026-07-19",
+
+  "eddb6acad4b6078e7a691d4fb8c452916efd288f27eb99a8426a2b81dfa5539c": {
+    "vendor":   "ManageEngine",
+    "product":  "UEMS Agent (Desktop Central) — InstallShield Setup",
+    "version":  "Unknown — recovered from Suspicious File.zip",
+    "status":   "pending_verification",
+    "case_study":       "Tahakom COOP Ground-Truth Artifact — 2026-07-19",
+    "artifact_origin":  "Suspicious File.zip (password: virus, recovered via zip2john + john)",
+    "network_context":  "SMB2 / port 445 / internal-to-internal (10.x.x.20 → 10.x.x.128)",
+    "vt_known_ratio":   "1/69 — ESET flagged as RemoteAdmin",
+    "sandbox_behavior": "Clean — standard InstallShield unpacking, no malicious indicators",
+    "signature_status": "Unsigned",
+    "expected_verdict": "Low Confidence (Suspicious / Pending Verification)",
+    "analyst_action":   "Confirm with IT Operations whether this UEMS deployment was authorised",
+    "notes": "PRIMARY VALIDATION CASE. Set status=approved after IT Ops confirmation to demonstrate the -80 whitelist-override path."
+  },
+
+  "a3f8c1e2d4b6f0e9a1c3d5e7f9b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6": {
+    "vendor":  "ManageEngine",
+    "product": "Desktop Central Agent",
+    "version": "10.1.2195.15",
+    "status":  "approved",
+    "notes":   "Official MSP deployment — IT dept approved 2024-09-10"
+  },
+  "b2e9d1c3f5a7e0b2d4f6a8c0e2b4d6f8a0c2e4f6b8d0f2a4c6e8b0d2f4a6c8e0": {
+    "vendor":  "ManageEngine",
+    "product": "UEMS Agent",
+    "version": "11.2.2310.01",
+    "status":  "approved",
+    "notes":   "Rolled out to all endpoints Q3-2024"
+  },
+  "c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6": {
+    "vendor":  "AnyDesk",
+    "product": "AnyDesk",
+    "version": "7.0.15",
+    "status":  "approved",
+    "notes":   "Licensed corporate build — ops team"
+  },
+  "d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0": {
+    "vendor":  "ConnectWise",
+    "product": "ScreenConnect Client",
+    "version": "23.9.8.8811",
+    "status":  "approved",
+    "notes":   "Help-desk remote support tool"
+  },
+  "e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4": {
+    "vendor":  "TeamViewer",
+    "product": "TeamViewer Host",
+    "version": "15.47.3",
+    "status":  "approved",
+    "notes":   "Remote monitoring — legacy servers only"
+  },
+  "f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2": {
+    "vendor":  "NinjaRMM",
+    "product": "NinjaOne Agent",
+    "version": "5.7.9912",
+    "status":  "approved",
+    "notes":   "Managed services deployment"
+  }
+}
