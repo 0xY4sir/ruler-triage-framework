@@ -2,7 +2,7 @@
 
 **Project:** *A Structured Triage Framework for IDS Alerts on Suspicious RMM Installers: A Case-Driven Approach*  
 **Institution:** University of Ha'il — Department of Information Security  
-**COOP training placement:** Tahakom  
+**COOP training placement:** TAHAKOM  
 **Supervisor:** Dr. Ehab AlNfrawy
 
 ## Objective
